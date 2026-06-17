@@ -1,0 +1,104 @@
+/* === RESET === */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === BASE === */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(26, 27, 27);
+    color:rgb(219, 219, 219);
+}
+
+a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(212, 138, 255);
+}
+
+/* === HEADER === */
+header {
+    background-color:rgb(69, 50, 43);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color:rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color:rgb(255, 255, 255);
+    font-size: 1rem;
+    background-color: rgb(26, 27, 27);
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color:rgb(0, 0, 0);
+    color:rgb(196, 132, 255);
+    text-decoration: none;
+}
+
+/* === FOOTER === */
+footer {
+    background-color:rgb(0, 34, 88);
+    padding: 24px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size: 0.85rem;
+    margin-top: 48px;
+}
+
+/* === MENU HAMBURGUESA === */
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color:rgb(255, 255, 255);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #menu-btn {
+        display: block;
+    }
+
+
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(146, 105, 54);
+    padding: 16px 24px;
+    }
+
+nav.abierto {
+    display: flex;
+    }
+
+    .decoracion-izquierda,
+    .decoracion-derecha {
+        display: none;
+    }
+}
